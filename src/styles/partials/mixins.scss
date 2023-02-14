@@ -3,3 +3,11 @@
     justify-content: $justufy;
     align-items: $align;
 }
+
+// MEDIA QUERY
+
+@mixin small () {
+    @media screen and (max-width: $breakpoint-small) {
+      background-color: rebeccapurple;
+    }
+}

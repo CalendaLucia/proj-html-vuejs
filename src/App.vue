@@ -1,5 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
 export default {
   name:'App',
   data() {
@@ -35,17 +36,19 @@ export default {
     }
   },
   components: {
-    AppHeader
+    AppHeader,
+    AppMain,
   }
 }
 </script>
 
 <template>
  <AppHeader :menuItems="menuItems" :icons="icons" :dropdown="dropdown"/>
+ <AppMain :statsNumber="statsNumber"/>
 </template>
 
 <style lang="scss">
 #app {
-  width: 100vw;
+  width: 100%;
 }
 </style>

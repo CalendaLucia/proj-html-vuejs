@@ -45,9 +45,6 @@ export default {
          
  }
   
-     
-
-
 </script>
 
 <template>
@@ -91,7 +88,7 @@ header {
   padding: 10px 0px;
   background-color: $background-color;
   background-image: url(../assets/images/background-pattern-wavify.png);
-
+ 
   #nav-bar {
     width: 80%;
     margin: 0 auto;
