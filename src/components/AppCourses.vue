@@ -4,44 +4,45 @@ export default {
     data() {
         return {
 
+
             data:[
                 {
-                    image: '../assets/images/motivation-course-06-480x298.jpg',
+                    img: '/motivation-course-1.jpg',
                     cost: '$30',  decim: '.00',
                     description:'How to be Successful: Create A Growth Mindset For Success',
                     lessons: '3 Lessons' ,
                     users: '50 Studenst'
                 },
                 {
-                    image: '../assets/images/motivation-course-06-480x298.jpg',
+                    img: '/motivation-course-2.jpg',
                     cost: '$30',  decim: '.00',
                     description:'How to be Build Confidence in Your Abilities',
                     lessons: '1 Lessons' ,
                     users: '50 Studenst'
                 },
                 {
-                    image: '../assets/images/motivation-course-06-480x298.jpg',
+                    img: '/motivation-course-3.jpg',
                     cost: '$20',  decim: '.00',
                     description:'Profuctivity Machine - Focus in a Sistracted World',
                     lessons: '5 Lessons' ,
                     users: '50 Studenst'
                 },
                 {
-                    image: '../assets/images/motivation-course-06-480x298.jpg',
+                    img: '/motivation-course-4.jpg',
                     cost: '$20', decim: '.00',
                     description:'Effective Time Managemente Mastery - Complete Guide',
                     lessons: '18 Lessons' ,
                     users: '50 Studenst'
                 },
                 {
-                    image: '../assets/images/motivation-course-06-480x298.jpg',
+                    img: '/motivation-course-5.jpg',
                     cost: '$25', decim: '.99',
                     description:'Body Language Secrets for entrepreneurs',
                     lessons: '19 Lessons' ,
                     users: '50 Studenst'
                 },
                 {
-                    image: '../assets/images/motivation-course-06-480x298.jpg',
+                    img: '/motivation-course-6.jpg',
                     cost: '$19', decim: '.99',
                     description:'Management Skills: Thw Science of Leadership',
                     lessons: '17 Lessons' ,
@@ -51,6 +52,7 @@ export default {
             
         }
     },
+
 }
 </script>
 
@@ -64,7 +66,7 @@ export default {
             <div class="row">
                 <div class="column"  v-for="item in data" :key="item.id">
                    <div class="card">
-                      <img src="../assets/images/motivation-course-06-480x298.jpg" >
+                      <img :src="`src/assets/images${item.img}`">
                    </div>
                    <div class="info-text">
                       <h5 class="cost"><span class="big"> {{ item.cost }}</span>{{ item.decim }}</h5>
@@ -125,9 +127,17 @@ export default {
             padding-top: 30px;
             @include flex (space-between, center);
             flex-wrap: wrap;
+            
 
             .column {
                 width:calc((100% / 3) - 20px);
+                margin: 30px 0px;
+                
+
+                &:hover {
+                    transform: translateY(10px);
+                    background-color: $background-color;
+                }
 
                 .card {
                     width: 100%;

@@ -45,11 +45,27 @@ export default {
                 <img src="../assets/images/product-book-11-400x400.jpg">
                 <h5>Alpha man by Maxcoach</h5>
                 <p class=" text-color">$29.00</p>
+                <div class="overlay">
+                  <div class="icons">
+                     <font-awesome-icon class="icon" icon="fa-solid fa-magnifying-glass"/>
+                     <font-awesome-icon class="icon" icon="fa-solid fa-cart-shopping"/>
+                     <font-awesome-icon class="icon" icon="fa-regular fa-heart"/>
+                     <font-awesome-icon class="icon" icon="fa-solid fa-signal"/>
+                  </div>
+                </div>
             </div>
             <div class="cover">
                 <img src="../assets/images/product-book-10-400x400.jpg">
                 <h5>Real man 4.0 by Maxcoach</h5>
                 <p class="text-color">$39.00</p>
+                <div class="overlay">
+                  <div class="icons">
+                     <font-awesome-icon class="icon" icon="fa-solid fa-magnifying-glass"/>
+                     <font-awesome-icon class="icon" icon="fa-solid fa-cart-shopping"/>
+                     <font-awesome-icon class="icon" icon="fa-regular fa-heart"/>
+                     <font-awesome-icon class="icon" icon="fa-solid fa-signal"/>
+                  </div>
+                </div>
             </div>
          </div>
          <div class="logos">
@@ -154,7 +170,9 @@ export default {
                 margin: 0px 10px;
                 text-align: center;
                 font-weight: lighter;
-                
+                position: relative;
+
+               
                 img {
                     width: 100%;
                     height: 100%;
@@ -170,7 +188,43 @@ export default {
                     color: $secondary-color;
                     font-size: 20px;
                 }
+                  .overlay {
+                     width: 100%;
+                     height: 100%;
+                     position: absolute;
+                     top: 0px;
+                     left: 0px;
+                     background-color: rgba(0,0,0,0.1);
+                     display: none;
+
+
+                     .icons {
+                        @include flex (center, flex-end);
+                        flex-direction: column;
+                        margin: 30px 20px;
+                      
+
+                        .icon {
+                             font-size: 15px;
+                             background-color: white;
+                             border-radius: 50%;
+                             padding: 15px 15px;
+                             margin: 10px 5px;
+                        }
+                       
+                     }
+                }
+                
             }
+            .cover:hover .overlay {
+               display: block;
+               
+}
+
+         
+                
+
+        
          
         }
 

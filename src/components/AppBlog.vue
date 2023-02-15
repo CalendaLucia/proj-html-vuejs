@@ -6,21 +6,25 @@ export default {
 
             data: [
                 {
+                    img:'/motivation-blog-1.jpg',
                     time:'May 13, 2020', 
                     info:'How to Stay true to Your Personal Brand',
                     text:"When it comes to your business or career, you want..."
                 },
                 {
+                    img:'/motivation-blog-2.jpg',
                     time:'May 13, 2020', 
                     info:'5 Vital Lessons in 5 Years of Freelancing',
                     text:"Being self-employed and workin from home, it's easy to get..."
                 },
                 {
+                    img:'/motivation-blog-3.jpg',
                     time:'May 13, 2020', 
                     info:'11 Super Useful Tips for Small-Business Owners',
                     text:"Being a small business owner poses a ton of challenges. We ..."
                 },
                 {
+                    img:'/motivation-blog-4.jpg',
                     time:'May 13, 2020', 
                     info:'How to Give Yourself Grace to Start Again',
                     text:"Forgive yourself for bad habits you may have started or ..."
@@ -49,7 +53,7 @@ export default {
                 <div class="row flex">
                     <div class="column " v-for="item in data" :key="item.id">
                         <div class="card">
-                            <img src="../assets/images/motivation-blog-04-480x325.jpg">
+                               <img :src="`src/assets/images${item.img}`">
                         </div>
                         <div class="text-info">
                             <font-awesome-icon class="myicon" icon="fa-regular fa-calendar"/>
