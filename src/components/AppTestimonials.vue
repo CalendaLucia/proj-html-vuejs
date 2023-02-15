@@ -41,7 +41,6 @@ export default {
           if (this.current >= this.images.length - 1) {
               this.current = 0;
            }
-
           
         },
 
@@ -49,7 +48,7 @@ export default {
             this.current--;
 
              if (this.current < 0) {
-                 this.current = this.images - 1;
+                 this.current = this.current - 1;
               }
 
              this.current = this.current;
