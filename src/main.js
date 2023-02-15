@@ -20,9 +20,10 @@ import { faFileLines } from '@fortawesome/free-regular-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faCalendar } from '@fortawesome/free-regular-svg-icons'
+import { faArrowUpLong } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faTwitter,faFacebookF,faInstagram,faLinkedin,faAngleDown,faArrowRightLong,faBook,faCartShopping,faFileLines,faUser,faCheck,faCalendar)
+library.add(faTwitter,faFacebookF,faInstagram,faLinkedin,faAngleDown,faArrowRightLong,faBook,faCartShopping,faFileLines,faUser,faCheck,faCalendar,faArrowUpLong)
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
