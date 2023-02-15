@@ -66,44 +66,52 @@ export default {
         }
 
         .how-to-be {
-          width: 50%;
+          width: 55%;
 
             h3 {
                 color: $secondary-color;
-                font-weight: lighter;
+                font-weight: bold;
                 padding: 20px 0px;
+                font-size: 12px;
             }
             p {
-                width: 75%;
+                width: 60%;
                 font-weight: lighter;
                 font-size: 30px;
-                line-height: 1.2; 
+                line-height: 1.6; 
                 letter-spacing: 1px; 
             }
         }
         .want-to-learn {
-            width: 45%;
+            width: 50%;
             
             .introduction-text {
-                font-size: 15px;
+                font-size: 16px;
                 padding: 10px 0px;
+                font-weight: bold;
+                line-height: 1.7;
 
-            }
-
-            .other-text {
-                    font-size: 12px;
-                     color: $link-color;
+                .text-color {
+                    color: $secondary-color;
                 }
-         
-        }
+            }
+            .other-text {
+                    font-size: 14px;
+                     color: $link-color;
+                     line-height: 1.6;
+                }
+         }
         .video {
             position: relative;
-            width: 55%;
-            height:auto;
+            width: 600px;
+            height:350px;
+            box-shadow: -9px 47px 33px -8px rgba(0,0,0,0.42);
+
             .img-video {
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
+                object-fit: cover;
+                object-position: top;
             }
             .youtube {
                 position: absolute;
@@ -113,13 +121,12 @@ export default {
             }
         }
         .cit {
-            width: 35%;
+            width: 30%;
             
             .citazione {
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 1.9;
-                letter-spacing: .2rem;
-                text-indent: -1rem;
+                text-indent: -0.1rem;
             }
             .shape {
                 margin-top: 50px;

@@ -84,7 +84,6 @@ export default {
         margin: 0 auto;
 
         .row {
-
             .flex {
                 @include flex (center, center);
             }
@@ -93,7 +92,7 @@ export default {
                 margin: 0px 15px;
 
                  .title {
-                       font-size: 15px;
+                       font-size: 12px;
                        color: $link-color;
                        padding: 20px 0px;
                  }
@@ -150,7 +149,7 @@ export default {
             margin: 0 auto;
             display: flex;
             justify-content: center;
-            padding: 20px 0px;
+            padding: 50px 0px;
             .text-color {
                 color: $secondary-color;
                 

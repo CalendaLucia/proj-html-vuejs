@@ -85,7 +85,7 @@ export default {
 header {
   width: 100%;
   max-width: 100%;
-  padding: 10px 0px;
+  padding-top: 20px;
   background-color: $background-color;
   background-image: url(../assets/images/background-pattern-wavify.png);
  

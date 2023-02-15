@@ -48,11 +48,10 @@ export default {
         @include flex (space-between, center);
 
         .text {
-            font-size: 15px;
+            font-size: 12px;
             padding: 10px 0px;
         }
         .large-text {
-                width: 80%;
                 font-weight: lighter;
                 font-size: 50px;
                 line-height: 1.2; 
@@ -85,18 +84,17 @@ export default {
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
-            align-self: flex-end;
+            
 
             img {
                 width: 100%;
                 object-fit: cover;
-                align-self: flex-end;
             }
         }
 
         .icons {
             position: absolute;
-            right: 10px;
+            right: 0px;
             top: 100px;
             display: flex;
             flex-direction: column;

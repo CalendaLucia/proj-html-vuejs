@@ -132,10 +132,11 @@ export default {
             .column {
                 width:calc((100% / 3) - 20px);
                 margin: 30px 0px;
+                transition: transform 0.3s;
                 
 
                 &:hover {
-                    transform: translateY(10px);
+                    transform: translateY(-10px);
                     background-color: $background-color;
                 }
 
@@ -161,7 +162,6 @@ export default {
                            font-size: 25px;
                         }  
                     }
-
                     .description {
                         color: $hover-button-color;
                         font-size: 18px;
@@ -185,14 +185,9 @@ export default {
                        }
                        
                     }
-
-
                 
             }
         }
-
-       
-
 
     }
 
@@ -200,7 +195,6 @@ export default {
         width: 80%;
         margin: 0 auto;
         @include flex (center, center);
-        padding: 50px 0px;
 
         .start {
             padding: 15px 55px;

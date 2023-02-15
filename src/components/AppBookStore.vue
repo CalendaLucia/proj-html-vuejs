@@ -3,6 +3,32 @@ export default {
     name: 'AppBookStore',
     data() {
         return {
+
+            logos: [ 
+                {
+                    logo: '/client-logo-05-primary.png'
+                },
+                {
+                    
+                     logo: '/client-logo-06-primary.png'
+                },
+                {
+                    
+                     logo: '/client-logo-01-primary.png'
+                },
+                {
+                    
+                     logo: '/client-logo-04-primary.png'
+                },
+                {
+                    
+                     logo: '/client-logo-03-primary.png'
+                },
+                {
+                    
+                     logo: '/client-logo-02-primary.png'
+                },
+            ]
             
         }
     },
@@ -42,7 +68,7 @@ export default {
          </div>
          <div class="books">
             <div class="cover">
-                <img src="../assets/images/product-book-11-400x400.jpg">
+                <img class="image" src="../assets/images/product-book-11-400x400.jpg">
                 <h5>Alpha man by Maxcoach</h5>
                 <p class=" text-color">$29.00</p>
                 <div class="overlay">
@@ -55,7 +81,7 @@ export default {
                 </div>
             </div>
             <div class="cover">
-                <img src="../assets/images/product-book-10-400x400.jpg">
+                <img class="image" src="../assets/images/product-book-10-400x400.jpg">
                 <h5>Real man 4.0 by Maxcoach</h5>
                 <p class="text-color">$39.00</p>
                 <div class="overlay">
@@ -69,23 +95,8 @@ export default {
             </div>
          </div>
          <div class="logos">
-            <div class="logo">
-                <img src="../assets/images/client-logo-05-primary.png">
-            </div>
-            <div class="logo">
-                <img src="../assets/images/client-logo-06-primary.png">
-            </div>
-            <div class="logo">
-                <img src="../assets/images/client-logo-01-primary.png">
-            </div>
-            <div class="logo">
-                <img src="../assets/images/client-logo-04-primary.png">
-            </div>
-            <div class="logo">
-                <img src="../assets/images/client-logo-03-primary.png">
-            </div>
-            <div class="logo">
-                <img src="../assets/images/client-logo-02-primary.png">
+            <div class="logo" v-for="logo in logos" :key="logo.id">
+                <img :src="`src/assets/images${logo.logo}`">
             </div>
          </div>
       </div>
@@ -96,7 +107,7 @@ export default {
 
 #store {
     width: 100%;
-
+    padding-top: 50px;
     .container {
         width: 80%;
         margin: 0 auto;
@@ -108,8 +119,10 @@ export default {
              width:30%;
             
             .text {
-                font-size: 15px;
+                font-size: 12px;
                 padding: 20px 0px;
+                font-weight: bold;
+                color: $link-color;
             }
             .other-text {
                     color: $hover-button-color;
@@ -166,14 +179,19 @@ export default {
             @include flex (center, center );
 
             .cover {
-                width: 40%;
-                margin: 0px 10px;
+                width: 35%;
+                margin: 0px 15px;
                 text-align: center;
                 font-weight: lighter;
                 position: relative;
+                transition: transform 0.3s;
 
-               
-                img {
+                &:hover {
+                    transform: translateY(-10px);
+                }
+                
+
+                .image {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
@@ -190,12 +208,13 @@ export default {
                 }
                   .overlay {
                      width: 100%;
-                     height: 100%;
+                     height: 80%;
                      position: absolute;
                      top: 0px;
                      left: 0px;
                      background-color: rgba(0,0,0,0.1);
                      display: none;
+                
 
 
                      .icons {
@@ -219,6 +238,7 @@ export default {
             .cover:hover .overlay {
                display: block;
                
+               
 }
 
          
@@ -231,12 +251,12 @@ export default {
         .logos {
             width: 100%;
             @include flex (space-around,center);
-            padding: 130px 0px;
+            padding: 80px 0px;
 
             .logo {
 
                 img {
-                    filter: grayscale(100%);
+                    filter: grayscale(70%) sepia(80%) saturate(0.2);
                 }
             }
         }
